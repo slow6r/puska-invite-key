@@ -1,0 +1,78 @@
+/* Глобальные стили для всего проекта */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+input[type="date"]::-moz-calendar-picker-indicator {
+  opacity: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+  background: initial !important;
+  color: initial !important;
+}
+
+@-moz-document url-prefix() {
+  input[type="date"],
+  input[type="time"] {
+    height: 40px;
+    line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/assets/fonts/Panton-Trial-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PantonBold";
+  src: url("/assets/fonts/Panton-Trial-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("/assets/fonts/calibri-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CalibriItalic";
+  src: url("/assets/fonts/calibri-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}

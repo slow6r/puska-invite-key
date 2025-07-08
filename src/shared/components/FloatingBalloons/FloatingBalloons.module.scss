@@ -1,0 +1,46 @@
+.balloons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.balloon {
+  position: absolute;
+  border-radius: 50% 50% 48% 52% / 60% 60% 40% 40%;
+  box-shadow: 0 0 32px 8px rgba(0, 255, 255, 0.3);
+  transition: filter 0.2s;
+  will-change: transform, opacity;
+  display: block;
+  animation: floatBalloon 18s linear infinite;
+}
+
+@keyframes floatBalloon {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+  }
+  90% {
+    transform: translateY(-10vh);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-20vh);
+    opacity: 0;
+  }
+}
+
+.string {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 2;
+}

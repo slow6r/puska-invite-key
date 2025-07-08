@@ -1,0 +1,75 @@
+/* Глобальный сброс и унификация стилей */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", Arial, sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Унификация скроллбара */
+body,
+.formpageScroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #9333ea #0a0a0a; /* Firefox */
+}
+body::-webkit-scrollbar,
+.formpageScroll::-webkit-scrollbar {
+  width: 8px;
+  background: #0a0a0a;
+}
+body::-webkit-scrollbar-thumb,
+.formpageScroll::-webkit-scrollbar-thumb {
+  background: #9333ea;
+  border-radius: 4px;
+}
+
+.MuiSvgIcon-root {
+  color: #fff !important;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+}
+.input-icon-wrapper input[type="date"],
+.input-icon-wrapper input[type="time"] {
+  position: relative;
+  z-index: 1;
+}

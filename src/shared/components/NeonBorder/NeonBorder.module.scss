@@ -1,0 +1,101 @@
+.neonBorder {
+  position: relative;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.neonBorder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  box-shadow: 0 0 8px 1px #a855f7, 0 0 16px 2px #9333ea;
+  pointer-events: none;
+  z-index: 1;
+  animation: neonBorderGlow 2.5s ease-in-out infinite alternate;
+}
+
+.neonBorder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes neonBorderGlow {
+  0% {
+    box-shadow: 0 0 8px 1px #a855f7, 0 0 16px 2px #9333ea;
+  }
+  100% {
+    box-shadow: 0 0 16px 4px #c084fc, 0 0 24px 6px #9333ea;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.194);
+  border-radius: 14px;
+  padding: 18px;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: none;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.671);
+}
+
+.content * {
+  color: #fff !important;
+}
+
+/* Менее яркие, тонкие контуры для инпутов (MUI TextField) */
+:global(.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  border-width: 1px !important;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.8), 0 0 20px rgba(147, 51, 234, 0.4) !important;
+}
+:global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 1) !important;
+  border-width: 1px !important;
+  box-shadow: 0 0 15px rgba(147, 51, 234, 1), 0 0 30px rgba(147, 51, 234, 0.6) !important;
+}
+:global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  border-width: 1px !important;
+  box-shadow: 0 0 12px rgba(147, 51, 234, 0.9), 0 0 25px rgba(147, 51, 234, 0.5) !important;
+}
+
+/* Менее яркие, тонкие контуры для кнопок */
+:global(.MuiButton-root) {
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  color: #fff !important;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.8), 0 0 20px rgba(147, 51, 234, 0.4) !important;
+}
+:global(.MuiButton-outlined) {
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  color: #fff !important;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.8), 0 0 20px rgba(147, 51, 234, 0.4) !important;
+}
+:global(.MuiButton-root:hover) {
+  border-color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 0 15px rgba(147, 51, 234, 1), 0 0 30px rgba(147, 51, 234, 0.6) !important;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 12px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 8px;
+    gap: 12px;
+  }
+}
