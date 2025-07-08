@@ -39,7 +39,11 @@ const InvitationPage: React.FC<InvitationPageProps> = ({
 
   useEffect(() => {
     const generateAllQR = async () => {
-      const qr1 = await QRCode.toDataURL("https://drklen.pushka.club");
+      // const qr1 = await QRCode.toDataURL("https://drklen.pushka.club");
+      // https://drkey.pushka.club/
+
+      const qr1 = await QRCode.toDataURL("https://drkey.pushka.club");
+
       const qr2 = await QRCode.toDataURL("https://vk.com/pushka_moscow");
       const guestsQR = guests
         .filter((g) => g.name && g.name.trim())
