@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import FormPage from "./pages/FormPage/FormPage";
 const logo = "/assets/logo.png";
-const musicFile = "/assets/music/Crazy_Frog_-_Axel_F_minus_75445587.mp3";
+const musicFile = "/assets/music/music.mp3";
 import styles from "./pages/FormPage/FormPage.module.scss";
 
 function MusicController({

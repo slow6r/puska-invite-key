@@ -190,7 +190,7 @@ const InvitationPDF: React.FC<InvitationPDFProps> = ({
               fontFamily: "PantonBold",
             }}
           >
-            НАС ЖДЁТ УВЛЕКАТЕЛЬНОЕ ПРИКЛЮЧЕНИЕ
+            НАС ЖДУТ УВЛЕКАТЕЛЬНЫЕ ПРИКЛЮЧЕНИЯ
           </Text>
           {services.length === 0 ? (
             <Text

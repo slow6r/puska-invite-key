@@ -306,7 +306,7 @@ const InvitationPreview: React.FC<InvitationPreviewProps> = ({
                 fontFamily: "PantonBold, Panton, Arial, sans-serif",
               }}
             >
-              НАС ЖДЁТ УВЛЕКАТЕЛЬНОЕ ПРИКЛЮЧЕНИЕ
+              НАС ЖДУТ УВЛЕКАТЕЛЬНЫЕ ПРИКЛЮЧЕНИЯ
             </div>
             <div
               style={{
@@ -520,7 +520,7 @@ const InvitationPreview: React.FC<InvitationPreviewProps> = ({
                   <br />
                   ул. Борисовские Пруды, 26
                   <br />
-                   ТЕЛ: 8 (926) 048-53-35 или (495) 147-90-52
+                  ТЕЛ: 8 (926) 048-53-35 или (495) 147-90-52
                 </div>
               </div>
               <div

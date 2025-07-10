@@ -191,7 +191,7 @@ export default function FormPage() {
                 </Button>
               </Box>
               <TextField
-                label="Контактный телефон"
+                label="Ваш контактный телефон"
                 name="phone"
                 value={form.phone}
                 onChange={handleChange}
